@@ -1,0 +1,99 @@
+body {
+  font-family: "Fraunces", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Start Header */
+header {
+  background-color: #002d40;
+  min-height: 100vh;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  -webkit-transition: top ease 0.5s;
+  -moz-transition: top ease 0.5s;
+  -ms-transition: top ease 0.5s;
+  -o-transition: top ease 0.5s;
+}
+
+.card:hover {
+  top: -15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+.popup-image span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+.popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  border: 5px solid #1aa6b7;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  width: 750px;
+  object-fit: cover;
+}
+.left-icon {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.right-icon {
+  position: absolute;
+  top: 50%;
+  right: 31%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .popup-image img {
+    width: 95%;
+  }
+}
+/* End Header */

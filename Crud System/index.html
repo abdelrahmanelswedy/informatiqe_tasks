@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jomhuria&family=Jomolhari&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,900&family=Loved+by+the+King&family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300&family=Patrick+Hand&family=Roboto:wght@100;300;400&family=Work+Sans:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/master.css" />
+    <script src="js/bootstrap.bundle.js"></script>
+  </head>
+
+  <body>
+    <main class="container-fluid">
+      <header class="container text-center mt-5 mb-5">
+        <h2 class="fw-bold fs-1">CRUD</h2>
+        <p class="lead fs-4">Product Management System</p>
+      </header>
+      <section class="inputs container ps-3">
+        <div class="row mb-3">
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Title"
+              aria-label="Title"
+              id="title"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input
+              onkeyup="getTotal() "
+              type="number"
+              class="form-control"
+              placeholder="price"
+              aria-label="First name"
+              id="price"
+            />
+          </div>
+          <div class="col">
+            <input
+              onkeyup="getTotal() "
+              type="number"
+              class="form-control"
+              placeholder="Tax"
+              aria-label="Last name"
+              id="tax"
+            />
+          </div>
+          <div class="col">
+            <input
+              onkeyup="getTotal() "
+              type="Number"
+              class="form-control"
+              placeholder="Ads"
+              aria-label="First name"
+              id="ads"
+            />
+          </div>
+          <div class="col">
+            <input
+              onkeyup="getTotal() "
+              type="number"
+              class="form-control"
+              placeholder="Discount"
+              aria-label="Last name"
+              id="discount"
+            />
+          </div>
+          <div class="col">
+            <div class="toot" id="total"></div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Count"
+              aria-label="Title"
+              id="count"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Category"
+              aria-label="Title"
+              id="category"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="d-grid">
+            <button id="create" class="btn btn-primary" type="button">
+              Create
+            </button>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input
+              onkeyup="searchData(this.value)"
+              type="text"
+              class="form-control"
+              placeholder="Search"
+              aria-label="Title"
+              id="search"
+            />
+          </div>
+        </div>
+        <div class="row mb-3 text-center search">
+          <div class="d-grid gap-2 d-md-block">
+            <button
+              onclick="changeSearchMood(this.id)"
+              id="search-by-title"
+              class="btn btn-primary col-md-4"
+              type="button"
+            >
+              Search By Title
+            </button>
+            <button
+              onclick="changeSearchMood(this.id)"
+              id="search-by-category"
+              class="btn btn-primary col-md-4"
+              type="button"
+            >
+              Search By Category
+            </button>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="d-grid">
+            <button
+              onclick="deleteAll()"
+              id="delete-all"
+              class="btn btn-primary"
+              type="button"
+            >
+              Delete All
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="outputs container table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">TITLE</th>
+              <th scope="col">PRICE</th>
+              <th scope="col">TAXES</th>
+              <th scope="col">ADS</th>
+              <th scope="col">DISCOUNT</th>
+              <th scope="col">TOTAL</th>
+              <th scope="col">CATEGORY</th>
+              <th scope="col">UPDATE</th>
+              <th scope="col">DELETE</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </section>
+
+      <script src="js/master.js"></script>
+    </main>
+  </body>
+</html>

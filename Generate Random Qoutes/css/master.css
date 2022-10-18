@@ -1,0 +1,19 @@
+body {
+  font-family: "Fraunces", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Start Header */
+header {
+  background-color: #002d40;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1.bf {
+  font-size: 100px;
+}
+/* End Header */
